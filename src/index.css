@@ -1,0 +1,144 @@
+.app-container {
+    min-height: 350px;
+}
+.navbar{
+    width: 100vw;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 0px; 
+     padding-left: 0px; 
+     margin-right: 0px; 
+     margin-left: 0px; 
+}
+.app-container {
+    min-height: 100vh;
+}
+.hh1{
+    text-align: center;
+    color: rgb(197, 15, 130);
+}
+.ll{
+    width: 100vw;
+    height: 100vh;
+}
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px;
+}
+
+.card-item {
+  width: 300px; /* set the width of each card */
+  height: 200px; /* set the height of each card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-item:hover {
+  transform: translateY(-10px);
+}
+.body{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fffdb3;
+}
+.loading{
+  position: relative;
+  top: 125px;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+}
+.loading::before{
+  content: '';
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  width: 100%;
+  height: 40%;
+  background: #fff;
+  box-shadow: 5px 5px 15px rgb(0,0,0,0.2);
+  border-radius: 15px;
+ background-color: hsl(0, 63%, 56%) 
+
+}
+.loading::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  
+  
+}
+.loading div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: hsl(131, 76%, 61%);
+  transform-style: preserve-3d;
+  overflow: hidden;
+  animation: animate 4s linear infinite;
+  animation-delay: calc(25s *var(--i));
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 25px;
+  border: 1px dotted white;
+}
+@keyframes animate{
+  0%{
+    transform :perspective(500px) translate3d(0,0,0);
+    opacity: 1;
+    box-shadow: 5px 10px 15px rgbbba(0,0,0,0);
+  }
+  25%{
+    transform :perspective(500px) translate3d(-50px,-50px,50px);
+    opacity: 1;
+    box-shadow: 5px 10px 15px rgbbba(0,0,0,0.2);
+  }
+  35%,100%{
+    transform :perspective(500px) translate3d(-600px,-50px,100px);
+    opacity: 0;
+  }
+  
+}
+.loading div div{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: em;
+  color: #fff;
+  background: #45abc4;
+  font-weight: 600;
+}
+.loading div div:nth-child(2){
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background: url();
+
+}
+.ac{
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  top: 5px;
+  left: 5px;
+color: white;
+background-color: black;
+}
